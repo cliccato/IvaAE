@@ -1,3 +1,4 @@
+import json
 from re import findall
 from requests import get
 from bs4 import BeautifulSoup
@@ -52,4 +53,4 @@ def get_data(taxation, device_number):
         }
     }
 
-    return data
+    return json.dumps(data, indent=4)
